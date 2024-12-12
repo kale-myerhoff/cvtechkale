@@ -1,0 +1,1 @@
+# [(sound)<(length 1000 == 1 sec), (pitch 1 - 37 middle c is 25)>]
