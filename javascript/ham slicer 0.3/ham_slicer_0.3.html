@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAM SLICER 0.3</title>
+    <link rel="stylesheet" href="skeleton.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main_body">
+        
+        <div id="the_ham">
+            
+            <div id="clickable_ham"   ><img src="images/Standard-Ham.png" onclick="ham_click()" id="Ham-Images" class="button"
+                width="100%" height="100%"></div>
+        </div>
+
+
+
+        <div id="header" >
+            <h2 id="ham_slices">ham slices: 0</h2>
+            <h3 id="spc">slices per click: 1</h3>
+
+            <h2  class=" button" onclick="chestButton()" id="chestId"> <img src="images/closed_chest.png" id="chestImg"  width="75%" height="100%"></h2>
+
+            <h2  class=" button" onclick="shopButton()" id="shopId"> <img src="images/coin.png"   width="75%" height="100%"></h2>
+            
+        </div>
+
+
+
+        <div id="generator_column" >
+            <h2  onclick="bestFriend ()" class="common generator button info" id="bestFriendId"> <img src="images/friend.png" alt="" width="100%" height="100%"> </h2>
+<!-- Friend: +1 ham every second / $150 ham -->
+            <div id="friend_info"> <p>Friend: +1 ham every second / $150 ham</p>
+            </div>
+            <h2  onclick="bestFriend ()" class="common generator button info" id="bestFriendId2" data-tooltip="Friend: +1 ham every second / $150 ham" > <img src="images/friend.png" alt="" width="100%" height="100%"> </h2>
+<!-- Friend: +1 ham every second / $150 ham -->
+            <div id="friend_info2"> <p>placeholder</p>
+
+            </div>
+        </div>
+
+
+
+        <div id="upgrade_column" >
+
+            <h2  onclick="butterKnife ()" class="common addition button info" id="butterKnifeId" > <img src="images/Butter-knife.png"  width="100%" height="100%"></h2>
+            <!-- butter knife: +1 ham for each click / $60 ham -->
+                <div id="butterKInfo"><p>
+                    butter knife: +1 ham for each click / $60 ham
+                </p></div>
+
+            <h2  onclick="plasticKnife ()" class="common addition button info" id="plasticKnifeId"> <img src="images/Plastic-Knife.png" width="100%" height="100%"></h2>
+            <!-- plastic knife: +5 ham for each click / $300 ham -->
+            <div id="plasticKInfo"><p>
+                plastic knife: +5 ham for each click / $300 ham
+            </p></div>
+
+                <h2  onclick="betterHam ()" class="common multiplier button info" id="betterHamId" > <img src="images/betterham-upgrade.png.png" width="100%" height="100%"> </h2>
+            <!-- better ham: Double your ham for each click / $1000 ham -->
+                <div id="betterHamInfo">
+                    <p>better ham: Double your ham for each click / $1000 ham</p>
+                </div>
+
+                <h2  onclick="honeyHam ()" class="common multiplier button info" id="honeyHamId" ><img src="images/honey.png" width="100%" height="100%"> </h2>
+            <!-- honey ham: Double your ham for each click / $1000 ham -->
+            <div id="honeyHamInfo">
+                <p>honey ham: Double your ham for each click / $1000 ham</p>
+            </div>
+
+                <h2  onclick="devHam ()" id="devHamId" class="common multiplier button info" ><img src="images/devHamPng.png" width="100%" height="100%"></h2>
+
+                <div id="devHamInfo">
+                    <p>Developer ham: cheating much? / + $1000 ham</p>
+                </div>
+        </div>
+
+
+
+        <div id="extras_column" >
+            extras placeholder
+        </div>
+
+
+
+
+
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

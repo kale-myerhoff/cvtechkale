@@ -1,0 +1,23 @@
+:root {
+  --clr-dark: #0f172a;
+  --clr-accent: #dee5e6;
+  --wallpaper: #f1f5f9;
+  --ham_color: #7a2c43b6;
+  --head: #2c457ab6;
+  --generator: #527c7c80;
+  --upgrade: #7a5d3788;
+  --empty: #383838b6;
+}
+
+body {
+  background-color: #0f172a;
+}
+
+
+
+
+#main_body {
+    height:95vh;
+    border: 10px solid var(--clr-dark); 
+    z-index: 1;
+  }

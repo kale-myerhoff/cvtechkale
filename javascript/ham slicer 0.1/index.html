@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAM SLICER</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 id="ham_slices">ham slices: 0</h1>
+   <div id="clickable_ham" class="button"  ><img src="images/ham.jpg" onclick="ham_click()"></div>
+
+<a href="shop.html">
+   <div id="shop" class="button" onclick="shop_click()" >
+    <img src="images/shopping-bag-icon.png" height="130px" >
+    <h3>Extras shop</h3>
+</div>
+</a>
+
+   <br>
+   <h2  onclick="devHam ()" id="devHamId" >Dev ham</h2>
+
+   <h2  onclick="bestFriend ()" class="common generator button" id="bestFriendId" > Friend: +1 ham every second / $150 ham</h2>
+   
+   <hr>
+
+     <h2  onclick="butterKnife ()" class="common addition button" id="butterKnifeId" >butter knife: +1 ham for each click / $60 ham</h2>
+
+     <h2  onclick="plasticKnife ()" class="common addition button" id="plasticKnifeId" >plastic knife: +5 ham for each click / $300 ham</h2>
+        
+    <h2  onclick="betterHam ()" class="common multiplier button" id="betterHamId" > better ham: +5 ham for each click / $300 ham</h2>
+
+
+</body>
+<script src="main.js"></script>
+</html>

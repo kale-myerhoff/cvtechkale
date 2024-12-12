@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAM SLICER</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body" style="background-color: rgb(255, 255, 255); background-image: null  ;" >
+
+    <audio id="hamClickSound" >
+        <source src="sound/hamClickSound.wav" type="audio/wav">
+    </audio>
+
+
+    <audio id="chestOpenSound">
+        <source src="sound/openChest.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="chestCloseSound">
+        <source src="sound/closeChest.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="shopOpenSound">
+        <source src="sound/openShop.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="shopCloseSound">
+        <source src="sound/closeShop.mp3" type="audio/mp3">
+    </audio>
+
+
+    <audio id="plantMusic">
+        <source src="sound/Cave Story OST Plant Extended Version.mp3" type="audio/mp3">
+    </audio>
+
+
+    <audio id="jazzyNBMusic">
+        <source src="sound/jazzyNoteBlocks.mp3" type="audio/mp3">
+    </audio>
+
+<div id="musicBarId" style="display: none;">
+<img src="images/musicBar.png" style="display:flexbox; position: fixed; top: 1%; right: 0%; width: 600px; height: 150px;">
+
+<div style="display:flexbox; position: fixed; top: 1%; right: 0%; width: 600px; height: 150px;">
+<img class=" button" onclick="chestButton()" src="images/plantDisc.png" style="display:flexbox; position: relative; top: 0%; left: 40%; ">
+</div>
+
+<div style="display:none; position: fixed; top: 1%; right: 0%; width: 600px; height: 150px;">
+<img class=" button" id="pauseButton" onclick="musicPause()" src="images/musicPauseButton.png" style="display:flexbox; position: relative; top: 0%; left: 75%; ">
+</div>
+
+<div style="display:flexbox; position: fixed; top: 1%; right: 0%; width: 600px; height: 150px;">
+<img class=" button" id="playButton" onclick="musicStop()" src="images/musicPlayButton.png" style="display:flexbox; position: relative; top: 0%; left: 75%; ">
+</div>
+
+</div>
+
+    <h1 id="ham_slices">ham slices: 0</h1>
+    <h3 id="spc">slices per click: 1</h3>
+   <div id="clickable_ham"   ><img src="images/Standard-Ham.png" onclick="ham_click()" id="Ham-Images" class="button"></div>
+
+
+
+   <br>
+   <h2  onclick="devHam ()" id="devHamId" >Dev ham</h2>
+
+   <h2  onclick="bestFriend ()" class="common generator button info" id="bestFriendId" data-tooltip="Friend: +1 ham every second / $150 ham" > <img src="images/friend.png" alt=""> </h2>
+<!-- Friend: +1 ham every second / $150 ham -->
+   
+   <hr>
+
+     <h2  onclick="butterKnife ()" class="common addition button info" id="butterKnifeId" data-tooltip="butter knife: +1 ham for each click / $60 ham" > <img src="images/Butter-knife.png" alt=""></h2>
+<!-- butter knife: +1 ham for each click / $60 ham -->
+
+<h2  onclick="plasticKnife ()" class="common addition button info" id="plasticKnifeId" data-tooltip="plastic knife: +5 ham for each click / $300 ham"> <img src="images/Plastic-Knife.png" alt=""></h2>
+<!-- plastic knife: +5 ham for each click / $300 ham -->
+    <h2  onclick="betterHam ()" class="common multiplier button info" id="betterHamId" data-tooltip="better ham: Double your ham for each click / $1000 ham" > <img src="images/betterham-upgrade.png.png" alt=""> </h2>
+<!-- better ham: Double your ham for each click / $1000 ham -->
+    <h2  onclick="honeyHam ()" class="common multiplier button info" id="honeyHamId" data-tooltip="honey ham: Double your ham for each click / $1000 ham"><img src="images/honey.png" alt=""> </h2>
+<!-- honey ham: Double your ham for each click / $1000 ham -->
+
+<hr>
+
+<h1>collection</h1>
+<h2  class=" button" onclick="chestButton()"> <img src="images/closed_chest.png" id="chestId"></h2>
+<div id="collectionInside" style="background-color: rgb(55, 71, 165); color: white; display: none;">
+    <hr>
+    <h3>backgrounds</h3>
+    <h2 onclick="backgroundWhite ()" id="whiteBackgroundId" class="background button info" data-tooltip="white background: makes your background white"> <img src="images/whiteBackgroundIcon.png" alt=""></h2>
+    <h2 onclick="backgroundSBlue ()" id="blueStripedBackgroundId" class="background button info" data-tooltip="striped blue background: makes your background striped blue"> <img src="images/blueStripedBackgroundIcon.png" alt=""></h2>
+ 
+    <hr>
+    <h3>music</h3>
+    <h2 onclick="plantMusicFunct ()" id="plantMusicId" class="background button info" data-tooltip="Plant disc: Plays plant from cave Story"> <img src="images/plantMusicIcon.png" alt=""></h2>
+    <h3 onclick="jazzyNBMusicFunct ()" id="whiteBackgroundId" class="background button info" data-tooltip="Jazzy Note Blocks disc: Plays Jazzy Note Blocks  by Aaron Grooves"> <img src="images/plantMusicIcon.png" alt=""></h3>
+</div>
+
+<hr>
+<h1>shop</h1>
+<h2  class=" button" onclick="shopButton()"> <img src="images/coin.png" id="shopId"></h2>
+<div id="shopInside" style="background-color: rgb(55, 71, 165); color: white; display: none;">
+    <p>hallo!</p>
+</div>
+
+
+</body>
+<footer style="padding-top: 25px; padding-bottom: 25px; text-align: center;">
+    <h1>made by kale myerhoff</h1></footer>
+<script src="main.js"></script>
+</html>

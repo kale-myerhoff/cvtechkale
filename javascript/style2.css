@@ -1,0 +1,49 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+
+  }
+
+  .item-1 {
+    grid-area: 1/ 1/ 4/ 4;
+    z-index: 1;
+    background-color: brown;
+  }
+  .item-2 {
+    grid-area: 1/ 1/ 13/ 4 ;
+    background-color: rgb(42, 116, 165);
+  }
+  .item-3 {
+grid-area: 1/ 4/ 13/ 7;
+background-color: rgb(201, 135, 50);
+  }
+  .item-4 {
+    grid-area: 1/ 7/ 13/ 10;
+    background-color: rgb(82, 46, 0);
+  }
+  .item-5 {
+grid-area: 1/ 10/ 13/ 13;
+background-color: rgb(42, 165, 114);
+  }
+  .item-6 {
+grid-area: 1/ 1/ 1/ 1;
+  }
+  .item-7 {
+grid-area: 1/ 1/ 1/ 1;
+  }
+  .item-8 {
+grid-area: 1/ 1/ 1/ 1;
+  }
+  .item-9 {
+grid-area: 1/ 1/ 1/ 1;
+  }
+  .item-10 {
+grid-area: 1/ 1/ 1/ 1;
+  }
+  .item-11 {
+grid-area: 1/ 1/ 1/ 1;
+  }
+  .item-12 {
+grid-area: 1/ 1/ 1/ 1;
+  }
