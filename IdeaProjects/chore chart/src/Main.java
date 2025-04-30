@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -20,12 +21,50 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
+        //hashmap//
+        HashMap<String, Integer> hashMap = new HashMap<>();
+        hashMap.put("chore 1", 1);
+        hashMap.put("chore 2", 1);
+        hashMap.put("chore 3", 1);
+        hashMap.put("chore 4", 1);
+        hashMap.put("chore 5", 1);
+        hashMap.put("chore 6", 1);
+        hashMap.put("chore 7", 1);
+        hashMap.put("chore 8", 1);
+        hashMap.put("chore 9", 1);
+        hashMap.put("chore 10", 1);
+        hashMap.put("chore 11", 1);
+        hashMap.put("chore 12", 1);
+        hashMap.put("bigChore 1", 4);
+        hashMap.put("bigChore 2", 4);
+        hashMap.put("bigChore 3", 4);
+        //hashmap//
+
+
+
+
+
+
+
         //variables start//
         int peopleNumb = 1;
         int totalWeekNumb = 1;
         boolean yesOrNo = false;
+        int totalPoints = 0;
+        int requiredPoints = 0;
+        ArrayList<String> choreList = new ArrayList<>(hashMap.keySet());
         ArrayList<String> nameList = new ArrayList<>();
+
         //variables end//
+
+
+
+
+
+
+        for ( int y: hashMap.values()) {
+            totalPoints = totalPoints + y;
+        }
 
         System.out.println("Welcome to the chore chart generator!");
         System.out.println(" ");
@@ -61,6 +100,8 @@ public class Main {
         }
 
             } while (!yesOrNo); yesOrNo = false; // re-Asks the question if not given affirmative and resets yesOrNo to false afterward
+
+        requiredPoints = totalPoints / peopleNumb;
         //amount of people and weeks//
 
 
@@ -80,6 +121,19 @@ public class Main {
         //chores//
         for (int i = 0; i < nameList.size(); i++) {
             System.out.println(nameList.get(i));
+
+            int currentPoints = 0;
+
+            do {
+                int selectedChore = random.nextInt(1, choreList.size());
+                
+                currentPoints += hashMap.get(choreList.get(selectedChore));
+                System.out.println(hashMap.get(choreList.get(selectedChore)));
+            } while (currentPoints < requiredPoints);
+
+
+
+
             
         }
         //chores//
