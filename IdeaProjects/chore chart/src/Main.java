@@ -12,32 +12,32 @@ public class Main {
 
         // generate an amount of chores based on the amount of people using a point value that will
         //have different amounts of required points based on the amount of people present (im thinking dividing the total amount of
-        // points by the amount of people)
+        // points by the amount of people) X
 
         // print this data to an external text file
 
-        //run this code for a set number of weeks
+        //run this code for a set number of weeks X
 
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
         //hashmap//
         HashMap<String, Integer> hashMap = new HashMap<>();
-        hashMap.put("chore 1", 1);
-        hashMap.put("chore 2", 1);
-        hashMap.put("chore 3", 1);
-        hashMap.put("chore 4", 1);
-        hashMap.put("chore 5", 1);
-        hashMap.put("chore 6", 1);
-        hashMap.put("chore 7", 1);
-        hashMap.put("chore 8", 1);
-        hashMap.put("chore 9", 1);
-        hashMap.put("chore 10", 1);
-        hashMap.put("chore 11", 1);
-        hashMap.put("chore 12", 1);
-        hashMap.put("bigChore 1", 4);
-        hashMap.put("bigChore 2", 4);
-        hashMap.put("bigChore 3", 4);
+        hashMap.put("pick up bathroom", 1);
+        hashMap.put("Trash", 1);
+        hashMap.put("Sweep + Mop", 1);
+        hashMap.put("Vacuum", 1);
+        hashMap.put("trash to road ", 1);
+        hashMap.put("Kitchen counter", 1);
+        hashMap.put("entry way", 1);
+        hashMap.put("toilet", 1);
+        hashMap.put("Bath and showers", 1);
+        hashMap.put("bathroom counter", 1);
+        hashMap.put("Dust", 1);
+        hashMap.put("Halls", 1);
+        hashMap.put("Dishes", 4);
+        hashMap.put("Living room", 4);
+        hashMap.put("kitchen", 4);
         //hashmap//
 
 
@@ -116,25 +116,47 @@ public class Main {
             System.out.println();
         }
         //people names//
-
+//        for (int i = 0; i < choreList.size(); i++) {
+//
+//            String selectedChoreName = choreList.get(i);
+//            System.out.println(selectedChoreName);
+//
+//        }
 
         //chores//
+        for (int y = 1; y < totalWeekNumb + 1; y++) {
+            choreList = new ArrayList<>(hashMap.keySet());
+            System.out.println("week " + y);
+            System.out.println(" ");
+
         for (int i = 0; i < nameList.size(); i++) {
             System.out.println(nameList.get(i));
 
             int currentPoints = 0;
 
             do {
-                int selectedChore = random.nextInt(1, choreList.size());
-                
-                currentPoints += hashMap.get(choreList.get(selectedChore));
-                System.out.println(hashMap.get(choreList.get(selectedChore)));
+                int selectedChore = random.nextInt(0, choreList.size());
+                String selectedChoreName = choreList.get(selectedChore);
+                int chorePoints = hashMap.get(choreList.get(selectedChore)); //chore points is equal to the point value of the chore selected by selected chore
+
+
+                if (currentPoints + chorePoints <= requiredPoints) {
+
+                    System.out.println(selectedChoreName);
+//                    System.out.println(chorePoints);
+
+
+                    choreList.remove(selectedChore);
+                    currentPoints += chorePoints;
+                }
+
+
             } while (currentPoints < requiredPoints);
 
+            System.out.println(" ");
 
 
-
-            
+        }
         }
         //chores//
 
